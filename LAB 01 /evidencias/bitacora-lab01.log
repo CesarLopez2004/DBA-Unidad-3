@@ -1,0 +1,959 @@
+2026-11-07 22:10:56.879 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:10:57.004 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 1 búfers (0.0%); escritos 0 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.116 s, sync=0.002 s, total=0.125 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=7 kB, estimación=2289 kB; lsn=0/3B61290, lsn de redo=0/3B61238
+2026-11-07 22:13:03.112 CST [14944] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=62591
+2026-11-07 22:13:03.124 CST [14944] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:13:03.124 CST [14944] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:9234072
+2026-11-07 22:15:47.043 CST [19892] user=[desconocido] db=[desconocido] app=[desconocido] client=127.0.0.1 LOG:  conexión recibida: host=127.0.0.1 port=50254
+2026-11-07 22:15:47.053 CST [19892] user=app_ventas db=DBA app=[desconocido] client=127.0.0.1 FATAL:  la autentificación password falló para el usuario «app_ventas»
+2026-11-07 22:15:47.053 CST [19892] user=app_ventas db=DBA app=[desconocido] client=127.0.0.1 DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/18/data/pg_hba.conf» línea 115: «host    all             all             127.0.0.1/32            scram-sha-256»
+2026-11-07 22:16:10.680 CST [9280] user=[desconocido] db=[desconocido] app=[desconocido] client=127.0.0.1 LOG:  conexión recibida: host=127.0.0.1 port=63588
+2026-11-07 22:16:10.690 CST [9280] user=usuario_inexistente db=DBA app=[desconocido] client=127.0.0.1 FATAL:  la autentificación password falló para el usuario «usuario_inexistente»
+2026-11-07 22:16:10.690 CST [9280] user=usuario_inexistente db=DBA app=[desconocido] client=127.0.0.1 DETALLE:  No existe el rol «usuario_inexistente».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/18/data/pg_hba.conf» línea 115: «host    all             all             127.0.0.1/32            scram-sha-256»
+2026-11-07 22:16:41.478 CST [8864] user=[desconocido] db=[desconocido] app=[desconocido] client=127.0.0.1 LOG:  conexión recibida: host=127.0.0.1 port=55686
+2026-11-07 22:16:41.489 CST [8864] user=app_ventas db=DBA app=[desconocido] client=127.0.0.1 LOG:  conexión autenticada: identidad=«app_ventas» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:115)
+2026-11-07 22:16:41.489 CST [8864] user=app_ventas db=DBA app=[desconocido] client=127.0.0.1 LOG:  conexión autorizada: usuario=app_ventas base_de_datos=DBA nombre_de_aplicación=app-ventas-web
+2026-11-07 22:16:41.529 CST [8864] user=app_ventas db=DBA app=app-ventas-web client=127.0.0.1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.061 usuario=app_ventas base=DBA host=127.0.0.1 port=55686
+2026-11-07 22:20:56.022 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:20:56.135 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 1 búfers (0.0%); escritos 0 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.106 s, sync=0.002 s, total=0.113 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=2061 kB; lsn=0/3B61A28, lsn de redo=0/3B619D0
+2026-11-07 22:21:13.336 CST [22992] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=60271
+2026-11-07 22:21:13.346 CST [22992] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:21:13.346 CST [22992] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:3844350
+2026-11-07 22:23:57.765 CST [22992] user=postgres db=DBA app=pgAdmin 4 - CONN:3844350 client=::1 LOG:  statement: REVOKE UPDATE ON public.clientes FROM soporte;
+2026-11-07 22:24:02.042 CST [22992] user=postgres db=DBA app=pgAdmin 4 - CONN:3844350 client=::1 LOG:  statement: GRANT UPDATE ON public.clientes TO app_ventas;
+2026-11-07 22:24:05.621 CST [22992] user=postgres db=DBA app=pgAdmin 4 - CONN:3844350 client=::1 LOG:  statement: ALTER TABLE public.clientes ADD COLUMN segmento VARCHAR(20);
+2026-11-07 22:24:09.371 CST [22992] user=postgres db=DBA app=pgAdmin 4 - CONN:3844350 client=::1 LOG:  statement: CREATE ROLE rol_temporal LOGIN PASSWORD '<REDACTED>';
+
+	DROP ROLE rol_temporal;
+2026-11-07 22:25:56.144 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:25:56.914 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 7 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.760 s, sync=0.004 s, total=0.771 s; archivos sincronizados=8, más largo=0.001 s, promedio=0.001 s; distancia=25 kB, estimación=1857 kB; lsn=0/3B67FC8, lsn de redo=0/3B67F70
+2026-11-07 22:26:03.055 CST [24152] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=57620
+2026-11-07 22:26:03.066 CST [24152] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:26:03.066 CST [24152] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:4135922
+2026-11-07 22:28:11.609 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 LOG:  statement: ALTER SYSTEM SET log_statement = 'mod';
+
+	SELECT pg_reload_conf();
+2026-11-07 22:28:11.609 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 ERROR:  ALTER SYSTEM cannot run inside a transaction block
+2026-11-07 22:28:11.609 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 STATEMENT:  ALTER SYSTEM SET log_statement = 'mod';
+
+	SELECT pg_reload_conf();
+2026-11-07 22:28:15.187 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 LOG:  statement: ALTER SYSTEM SET log_statement = 'mod';
+2026-11-07 22:28:33.207 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 LOG:  statement: UPDATE public.clientes SET telefono = '6679990000' WHERE id = 3;
+2026-11-07 22:30:56.737 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:30:57.292 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 5 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.544 s, sync=0.006 s, total=0.555 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.001 s; distancia=13 kB, estimación=1673 kB; lsn=0/3B6B4E8, lsn de redo=0/3B6B490
+2026-11-07 22:31:48.402 CST [23452] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=58950
+2026-11-07 22:31:48.411 CST [23452] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:31:48.411 CST [23452] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:3339356
+2026-11-07 22:32:27.545 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: -- 1. Preparar el rol de soporte (por si no lo tenÃ­as de la sesiÃ³n anterior)
+
+	CREATE ROLE soporte_ana LOGIN PASSWORD 'Soporte_Practica_2026';
+
+	GRANT SELECT ON public.clientes TO soporte_ana;
+
+	
+
+	-- 2. El analista intenta borrar un dato (Error de permisos)
+
+	SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+
+	
+
+	-- 3. El administrador intenta eliminar el rol (Error de dependencias)
+
+	DROP ROLE soporte_ana;
+2026-11-07 22:32:27.545 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  role "soporte_ana" already exists
+2026-11-07 22:32:27.545 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  -- 1. Preparar el rol de soporte (por si no lo tenÃ­as de la sesiÃ³n anterior)
+
+	CREATE ROLE soporte_ana LOGIN PASSWORD 'Soporte_Practica_2026';
+
+	GRANT SELECT ON public.clientes TO soporte_ana;
+
+	
+
+	-- 2. El analista intenta borrar un dato (Error de permisos)
+
+	SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+
+	
+
+	-- 3. El administrador intenta eliminar el rol (Error de dependencias)
+
+	DROP ROLE soporte_ana;
+2026-11-07 22:32:32.384 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: CREATE ROLE soporte_ana LOGIN PASSWORD 'Soporte_Practica_2026';
+2026-11-07 22:32:32.384 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  role "soporte_ana" already exists
+2026-11-07 22:32:32.384 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  CREATE ROLE soporte_ana LOGIN PASSWORD 'Soporte_Practica_2026';
+2026-11-07 22:35:52.345 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: GRANT SELECT ON public.clientes TO soporte_ana;
+2026-11-07 22:35:55.714 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+2026-11-07 22:35:55.717 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:35:55.717 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+2026-11-07 22:35:56.302 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:35:56.746 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 4 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.436 s, sync=0.003 s, total=0.445 s; archivos sincronizados=5, más largo=0.001 s, promedio=0.001 s; distancia=9 kB, estimación=1506 kB; lsn=0/3B6DAA8, lsn de redo=0/3B6DA50
+2026-11-07 22:35:58.104 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: DROP ROLE soporte_ana;
+2026-11-07 22:35:58.104 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  role "soporte_ana" cannot be dropped because some objects depend on it
+2026-11-07 22:35:58.104 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 DETAIL:  privileges for table clientes
+2026-11-07 22:35:58.104 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  DROP ROLE soporte_ana;
+2026-11-07 22:36:01.352 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+2026-11-07 22:36:01.352 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:36:01.352 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+2026-11-07 22:36:36.616 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: -- 1. Asegurar permisos (por si acaso)
+
+	GRANT SELECT ON public.clientes TO soporte_ana;
+
+	
+
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+
+	SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+
+	
+
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+
+	DROP ROLE soporte_ana;
+2026-11-07 22:36:36.617 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:36:36.617 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  -- 1. Asegurar permisos (por si acaso)
+
+	GRANT SELECT ON public.clientes TO soporte_ana;
+
+	
+
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+
+	SET ROLE soporte_ana;
+
+	DELETE FROM public.clientes WHERE id = 5;
+
+	RESET ROLE;
+
+	
+
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+
+	DROP ROLE soporte_ana;
+2026-11-07 22:37:18.321 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "ORDER" at character 1
+2026-11-07 22:37:18.321 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  ORDER BY num DESC LIMIT 10;
+2026-11-07 22:37:38.635 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "WHERE" at character 1
+2026-11-07 22:37:38.635 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:37:45.907 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "ORDER" at character 1
+2026-11-07 22:37:45.907 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:24.830 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "WHERE" at character 1
+2026-11-07 22:38:24.830 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:38.008 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "ORDER" at character 1
+2026-11-07 22:38:38.008 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:42.113 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  syntax error at or near "WHERE" at character 1
+2026-11-07 22:38:42.113 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+2026-11-07 22:38:42.888 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: -- Unidad 3. LAB-01 BitÃ¡coras y auditorÃ­a del dato en PostgreSQL.
+	-- Actividad 8 â Errores y operaciones rechazadas.
+	-- PARTE A. BitÃ¡cora del servidor.
+	
+	-- 1. Asegurar permisos (por si acaso)
+	GRANT SELECT ON public.clientes TO soporte_ana;
+	
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+	SET ROLE soporte_ana;
+	DELETE FROM public.clientes WHERE id = 5;
+	RESET ROLE;
+	
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+	DROP ROLE soporte_ana;
+	
+	SELECT linea FROM dba.bitacora
+	WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:42.889 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:38:42.889 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  -- Unidad 3. LAB-01 BitÃ¡coras y auditorÃ­a del dato en PostgreSQL.
+	-- Actividad 8 â Errores y operaciones rechazadas.
+	-- PARTE A. BitÃ¡cora del servidor.
+	
+	-- 1. Asegurar permisos (por si acaso)
+	GRANT SELECT ON public.clientes TO soporte_ana;
+	
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+	SET ROLE soporte_ana;
+	DELETE FROM public.clientes WHERE id = 5;
+	RESET ROLE;
+	
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+	DROP ROLE soporte_ana;
+	
+	SELECT linea FROM dba.bitacora
+	WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:43.616 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  statement: -- Unidad 3. LAB-01 BitÃ¡coras y auditorÃ­a del dato en PostgreSQL.
+	-- Actividad 8 â Errores y operaciones rechazadas.
+	-- PARTE A. BitÃ¡cora del servidor.
+	
+	-- 1. Asegurar permisos (por si acaso)
+	GRANT SELECT ON public.clientes TO soporte_ana;
+	
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+	SET ROLE soporte_ana;
+	DELETE FROM public.clientes WHERE id = 5;
+	RESET ROLE;
+	
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+	DROP ROLE soporte_ana;
+	
+	SELECT linea FROM dba.bitacora
+	WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:38:43.618 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:38:43.618 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 STATEMENT:  -- Unidad 3. LAB-01 BitÃ¡coras y auditorÃ­a del dato en PostgreSQL.
+	-- Actividad 8 â Errores y operaciones rechazadas.
+	-- PARTE A. BitÃ¡cora del servidor.
+	
+	-- 1. Asegurar permisos (por si acaso)
+	GRANT SELECT ON public.clientes TO soporte_ana;
+	
+	-- 2. El analista intenta borrar un dato (ProvocarÃ¡ Error de permisos)
+	SET ROLE soporte_ana;
+	DELETE FROM public.clientes WHERE id = 5;
+	RESET ROLE;
+	
+	-- 3. El administrador intenta eliminar el rol (ProvocarÃ¡ Error de dependencias)
+	DROP ROLE soporte_ana;
+	
+	SELECT linea FROM dba.bitacora
+	WHERE linea ~ '(ERROR|STATEMENT|DETAIL):  (permission|privileges|role|DELETE|DROP)'
+	ORDER BY num DESC LIMIT 10;
+2026-11-07 22:39:30.935 CST [19908] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=52539
+2026-11-07 22:39:30.944 CST [19908] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:39:30.944 CST [19908] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:2242081
+2026-11-07 22:40:56.747 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:40:56.983 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 2 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.214 s, sync=0.016 s, total=0.236 s; archivos sincronizados=3, más largo=0.013 s, promedio=0.006 s; distancia=9 kB, estimación=1356 kB; lsn=0/3B6FF78, lsn de redo=0/3B6FF20
+2026-11-07 22:43:37.144 CST [22312] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=51684
+2026-11-07 22:43:37.153 CST [22312] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:43:37.153 CST [22312] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:46:51.816 CST [9824] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=55346
+2026-11-07 22:46:51.825 CST [9824] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:46:51.825 CST [9824] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:46:51.828 CST [9824] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=55346
+2026-11-07 22:46:51.832 CST [14944] user=postgres db=DBA app=pgAdmin 4 - CONN:9234072 client=::1 LOG:  disconnection: session time: 0:33:48.732 user=postgres database=DBA host=::1 port=62591
+2026-11-07 22:47:05.385 CST [15260] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=54767
+2026-11-07 22:47:05.393 CST [15260] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:47:05.393 CST [15260] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:47:05.396 CST [15260] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=54767
+2026-11-07 22:47:05.400 CST [22992] user=postgres db=DBA app=pgAdmin 4 - CONN:3844350 client=::1 LOG:  disconnection: session time: 0:25:52.075 user=postgres database=DBA host=::1 port=60271
+2026-11-07 22:47:22.230 CST [9540] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=52856
+2026-11-07 22:47:22.239 CST [9540] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:47:22.239 CST [9540] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:47:22.242 CST [9540] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=52856
+2026-11-07 22:47:22.244 CST [24152] user=postgres db=DBA app=pgAdmin 4 - CONN:4135922 client=::1 LOG:  disconnection: session time: 0:21:19.201 user=postgres database=DBA host=::1 port=57620
+2026-11-07 22:47:35.542 CST [15860] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=60372
+2026-11-07 22:47:35.550 CST [15860] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:47:35.550 CST [15860] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:47:35.553 CST [15860] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=60372
+2026-11-07 22:47:35.556 CST [23452] user=postgres db=DBA app=pgAdmin 4 - CONN:3339356 client=::1 LOG:  disconnection: session time: 0:15:47.164 user=postgres database=DBA host=::1 port=58950
+2026-11-07 22:47:47.984 CST [12128] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=53712
+2026-11-07 22:47:47.992 CST [12128] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:47:47.992 CST [12128] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:47:47.995 CST [12128] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=53712
+2026-11-07 22:47:47.997 CST [19908] user=postgres db=DBA app=pgAdmin 4 - CONN:2242081 client=::1 LOG:  disconnection: session time: 0:08:17.073 user=postgres database=DBA host=::1 port=52539
+2026-11-07 22:47:59.785 CST [21796] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=59252
+2026-11-07 22:47:59.793 CST [21796] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:47:59.793 CST [21796] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:47:59.796 CST [21796] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=59252
+2026-11-07 22:48:08.531 CST [15456] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=65462
+2026-11-07 22:48:08.539 CST [15456] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:48:08.539 CST [15456] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:48:08.542 CST [15456] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.021 usuario=postgres base=DBA host=::1 port=65462
+2026-11-07 22:48:20.316 CST [12332] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=59516
+2026-11-07 22:48:20.327 CST [12332] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:48:20.327 CST [12332] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:48:20.332 CST [12332] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.028 usuario=postgres base=DBA host=::1 port=59516
+2026-11-07 22:48:29.420 CST [9796] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=58335
+2026-11-07 22:48:29.428 CST [9796] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:48:29.428 CST [9796] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1567855
+2026-11-07 22:48:29.431 CST [9796] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=58335
+2026-11-07 22:48:54.456 CST [22312] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  statement: CREATE SCHEMA IF NOT EXISTS auditoria;
+
+	REVOKE ALL ON SCHEMA auditoria FROM PUBLIC;
+2026-11-07 22:48:59.486 CST [22312] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  statement: CREATE TABLE auditoria.historial_clientes (
+
+	    id_auditoria BIGSERIAL PRIMARY KEY,
+
+	    fecha_evento TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+
+	    usuario_db VARCHAR(50) DEFAULT current_user,
+
+	    operacion VARCHAR(10), -- GuardarÃ¡ si fue INSERT, UPDATE o DELETE
+
+	    id_cliente BIGINT,
+
+	    datos_anteriores JSONB, -- Formato JSON para guardar toda la fila vieja
+
+	    datos_nuevos JSONB      -- Formato JSON para guardar toda la fila nueva
+
+	);
+2026-11-07 22:49:54.681 CST [22312] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  statement: CREATE OR REPLACE FUNCTION auditoria.fn_auditar_clientes()
+
+	RETURNS TRIGGER AS $$
+
+	BEGIN
+
+	    IF (TG_OP = 'DELETE') THEN
+
+	        INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('DELETE', OLD.id, row_to_json(OLD), NULL);
+
+	        RETURN OLD;
+
+	    ELSIF (TG_OP = 'UPDATE') THEN
+
+	        INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('UPDATE', NEW.id, row_to_json(OLD), row_to_json(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF (TG_OP = 'INSERT') THEN
+
+	        INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('INSERT', NEW.id, NULL, row_to_json(NEW));
+
+	        RETURN NEW;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$ LANGUAGE plpgsql;
+
+	
+2026-11-07 22:49:58.458 CST [22312] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  statement: CREATE TRIGGER trg_auditoria_clientes
+
+	AFTER INSERT OR UPDATE OR DELETE ON public.clientes
+
+	FOR EACH ROW EXECUTE FUNCTION auditoria.fn_auditar_clientes();
+2026-11-07 22:50:57.002 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:51:02.087 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 46 búfers (0.3%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.052 s, sync=0.019 s, total=5.086 s; archivos sincronizados=46, más largo=0.002 s, promedio=0.001 s; distancia=213 kB, estimación=1242 kB; lsn=0/3BA5418, lsn de redo=0/3BA53C0
+2026-11-07 22:53:01.540 CST [8928] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=59466
+2026-11-07 22:53:01.551 CST [8928] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 22:53:01.551 CST [8928] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:1877040
+2026-11-07 22:54:19.730 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 22:54:19.732 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  permission denied for table clientes
+2026-11-07 22:54:19.732 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 22:55:57.094 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 22:55:57.207 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 1 búfers (0.0%); escritos 0 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.105 s, sync=0.001 s, total=0.113 s; archivos sincronizados=1, más largo=0.001 s, promedio=0.001 s; distancia=1 kB, estimación=1118 kB; lsn=0/3BA5B68, lsn de redo=0/3BA5B10
+2026-11-07 22:57:22.556 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: 
+
+	GRANT DELETE ON public.clientes TO app_ventas;
+2026-11-07 22:57:34.299 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 22:57:34.303 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "clientes" violates foreign key constraint "mapa_cliente_cliente_id_fkey" on table "mapa_cliente"
+2026-11-07 22:57:34.303 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (id)=(4) is still referenced from table "mapa_cliente".
+2026-11-07 22:57:34.303 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 22:58:20.063 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM public.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 22:58:20.063 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  relation "public.mapa_cliente" does not exist at character 13
+2026-11-07 22:58:20.063 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM public.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 22:59:11.131 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 22:59:11.134 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 22:59:11.134 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 22:59:11.134 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:00:02.295 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+2026-11-07 23:00:02.296 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  column "cliente_token" of relation "clientes" does not exist at character 28
+2026-11-07 23:00:02.296 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+2026-11-07 23:00:05.844 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:00:05.844 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:00:05.844 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:00:05.844 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:00:09.372 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: 
+
+	-- 3. Simular el borrado accidental como la aplicaciÃ³n de ventas
+
+	SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 23:00:09.373 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "clientes" violates foreign key constraint "mapa_cliente_cliente_id_fkey" on table "mapa_cliente"
+2026-11-07 23:00:09.373 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (id)=(4) is still referenced from table "mapa_cliente".
+2026-11-07 23:00:09.373 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  
+
+	-- 3. Simular el borrado accidental como la aplicaciÃ³n de ventas
+
+	SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 23:00:49.173 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: CREATE OR REPLACE FUNCTION auditoria.registrar_cambio_cliente()
+
+	RETURNS trigger
+
+	LANGUAGE plpgsql
+
+	SECURITY DEFINER
+
+	SET search_path = pg_catalog, public
+
+	AS $$
+
+	BEGIN
+
+	    IF TG_OP = 'INSERT' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'UPDATE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(OLD), to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'DELETE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes)
+
+	        VALUES (TG_OP, OLD.id, to_jsonb(OLD));
+
+	        RETURN OLD;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$;
+
+	
+
+	REVOKE ALL ON FUNCTION auditoria.registrar_cambio_cliente() FROM PUBLIC;
+
+	
+
+	CREATE TRIGGER trg_auditoria_clientes
+
+	AFTER INSERT OR UPDATE OR DELETE ON clientes
+
+	FOR EACH ROW EXECUTE FUNCTION auditoria.registrar_cambio_cliente();
+2026-11-07 23:00:49.183 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  trigger "trg_auditoria_clientes" for relation "clientes" already exists
+2026-11-07 23:00:49.183 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  CREATE OR REPLACE FUNCTION auditoria.registrar_cambio_cliente()
+
+	RETURNS trigger
+
+	LANGUAGE plpgsql
+
+	SECURITY DEFINER
+
+	SET search_path = pg_catalog, public
+
+	AS $$
+
+	BEGIN
+
+	    IF TG_OP = 'INSERT' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'UPDATE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(OLD), to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'DELETE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes)
+
+	        VALUES (TG_OP, OLD.id, to_jsonb(OLD));
+
+	        RETURN OLD;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$;
+
+	
+
+	REVOKE ALL ON FUNCTION auditoria.registrar_cambio_cliente() FROM PUBLIC;
+
+	
+
+	CREATE TRIGGER trg_auditoria_clientes
+
+	AFTER INSERT OR UPDATE OR DELETE ON clientes
+
+	FOR EACH ROW EXECUTE FUNCTION auditoria.registrar_cambio_cliente();
+2026-11-07 23:00:57.209 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:00:58.876 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 15 búfers (0.1%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.653 s, sync=0.006 s, total=1.668 s; archivos sincronizados=15, más largo=0.001 s, promedio=0.001 s; distancia=79 kB, estimación=1014 kB; lsn=0/3BB9860, lsn de redo=0/3BB9808
+2026-11-07 23:01:24.465 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: ALTER TABLE public.clientes DROP CONSTRAINT IF EXISTS clientes_cliente_token_fkey;
+
+	ALTER TABLE pii.mapa_cliente DROP CONSTRAINT IF EXISTS mapa_cliente_cliente_id_fkey;
+2026-11-07 23:01:30.580 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: -- 3. Borrar el registro secundario sin problemas
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:01:30.582 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:01:30.582 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:01:30.582 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  -- 3. Borrar el registro secundario sin problemas
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:02:10.010 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  syntax error at or near "AFTER" at character 889
+2026-11-07 23:02:10.010 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  CREATE OR REPLACE FUNCTION auditoria.registrar_cambio_cliente()
+
+	RETURNS trigger
+
+	LANGUAGE plpgsql
+
+	SECURITY DEFINER
+
+	SET search_path = pg_catalog, public
+
+	AS $$
+
+	BEGIN
+
+	    IF TG_OP = 'INSERT' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'UPDATE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(OLD), to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'DELETE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes)
+
+	        VALUES (TG_OP, OLD.id, to_jsonb(OLD));
+
+	        RETURN OLD;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$;
+
+	
+
+	REVOKE ALL ON FUNCTION auditoria.registrar_cambio_cliente() FROM PUBLIC;
+
+	
+
+	AFTER INSERT OR UPDATE OR DELETE ON clientes
+
+	FOR EACH ROW EXECUTE FUNCTION auditoria.registrar_cambio_cliente();
+2026-11-07 23:02:11.796 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  syntax error at or near "AFTER" at character 889
+2026-11-07 23:02:11.796 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  CREATE OR REPLACE FUNCTION auditoria.registrar_cambio_cliente()
+
+	RETURNS trigger
+
+	LANGUAGE plpgsql
+
+	SECURITY DEFINER
+
+	SET search_path = pg_catalog, public
+
+	AS $$
+
+	BEGIN
+
+	    IF TG_OP = 'INSERT' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'UPDATE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(OLD), to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'DELETE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes)
+
+	        VALUES (TG_OP, OLD.id, to_jsonb(OLD));
+
+	        RETURN OLD;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$;
+
+	
+
+	REVOKE ALL ON FUNCTION auditoria.registrar_cambio_cliente() FROM PUBLIC;
+
+	
+
+	AFTER INSERT OR UPDATE OR DELETE ON clientes
+
+	FOR EACH ROW EXECUTE FUNCTION auditoria.registrar_cambio_cliente();
+2026-11-07 23:02:18.788 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: 
+
+	CREATE OR REPLACE FUNCTION auditoria.registrar_cambio_cliente()
+
+	RETURNS trigger
+
+	LANGUAGE plpgsql
+
+	SECURITY DEFINER
+
+	SET search_path = pg_catalog, public
+
+	AS $$
+
+	BEGIN
+
+	    IF TG_OP = 'INSERT' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'UPDATE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes, valores_despues)
+
+	        VALUES (TG_OP, NEW.id, to_jsonb(OLD), to_jsonb(NEW));
+
+	        RETURN NEW;
+
+	    ELSIF TG_OP = 'DELETE' THEN
+
+	        INSERT INTO auditoria.cambios_clientes (operacion, id_cliente, valores_antes)
+
+	        VALUES (TG_OP, OLD.id, to_jsonb(OLD));
+
+	        RETURN OLD;
+
+	    END IF;
+
+	    RETURN NULL;
+
+	END;
+
+	$$;
+
+	
+
+	REVOKE ALL ON FUNCTION auditoria.registrar_cambio_cliente() FROM PUBLIC;
+
+	
+2026-11-07 23:02:36.444 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  syntax error at or near "AFTER" at character 1
+2026-11-07 23:02:36.444 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  AFTER INSERT OR UPDATE OR DELETE ON clientes
+2026-11-07 23:02:47.173 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  syntax error at or near "FOR" at character 1
+2026-11-07 23:02:47.173 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  FOR EACH ROW EXECUTE FUNCTION auditoria.registrar_cambio_cliente();
+2026-11-07 23:03:09.224 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: ALTER TABLE public.clientes DROP CONSTRAINT IF EXISTS clientes_cliente_token_fkey CASCADE;
+
+	ALTER TABLE pii.mapa_cliente DROP CONSTRAINT IF EXISTS mapa_cliente_cliente_id_fkey CASCADE;
+2026-11-07 23:03:13.319 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:13.319 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:13.319 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:13.319 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.373 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.374 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:14.374 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:14.374 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.562 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.563 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:14.563 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:14.563 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.731 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.731 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:14.731 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:14.731 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.892 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:14.893 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:14.893 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:14.893 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.041 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.042 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:15.042 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:15.042 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.219 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.220 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:15.220 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:15.220 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.513 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.514 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:15.514 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:15.514 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.696 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:15.696 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:15.696 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:15.696 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:16.040 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:03:16.040 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  update or delete on table "mapa_cliente" violates foreign key constraint "clientes_cliente_token_fkey" on table "clientes"
+2026-11-07 23:03:16.040 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (token)=(94034c1b-7975-49db-ae07-a0a53ff4f600) is still referenced from table "clientes".
+2026-11-07 23:03:16.040 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:04:24.344 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:04:24.344 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  column "cliente_token" of relation "clientes" does not exist at character 28
+2026-11-07 23:04:24.344 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:04:28.901 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+2026-11-07 23:04:28.902 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  column "cliente_token" of relation "clientes" does not exist at character 28
+2026-11-07 23:04:28.902 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+2026-11-07 23:04:31.294 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:04:31.295 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  column "cliente_token" of relation "clientes" does not exist at character 28
+2026-11-07 23:04:31.295 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  UPDATE public.clientes SET cliente_token = NULL WHERE id = 4;
+
+	DELETE FROM pii.mapa_cliente WHERE cliente_id = 4;
+2026-11-07 23:04:40.787 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: 
+
+	-- 5. Prueba de fuego: Borrar el cliente simulando ser app_ventas
+
+	SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 23:04:40.800 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  permission denied for schema auditoria at character 13
+2026-11-07 23:04:40.800 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 QUERY:  INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('DELETE', OLD.id, row_to_json(OLD), NULL)
+2026-11-07 23:04:40.800 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 CONTEXT:  PL/pgSQL function auditoria.fn_auditar_clientes() line 4 at SQL statement
+2026-11-07 23:04:40.800 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  
+
+	-- 5. Prueba de fuego: Borrar el cliente simulando ser app_ventas
+
+	SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 4;
+
+	RESET ROLE;
+2026-11-07 23:05:48.228 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: INSERT INTO public.clientes (id, nombre, correo, telefono, rfc, edad, ciudad, codigo_postal, fecha_alta)
+
+	VALUES (999, 'Cliente de Prueba', 'prueba@test.com', '5550000000', 'XAXX010101000', 30, 'CDMX', '00000', CURRENT_DATE);
+2026-11-07 23:05:51.666 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 999;
+
+	RESET ROLE;
+2026-11-07 23:05:51.666 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  permission denied for schema auditoria at character 13
+2026-11-07 23:05:51.666 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 QUERY:  INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('DELETE', OLD.id, row_to_json(OLD), NULL)
+2026-11-07 23:05:51.666 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 CONTEXT:  PL/pgSQL function auditoria.fn_auditar_clientes() line 4 at SQL statement
+2026-11-07 23:05:51.666 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 999;
+
+	RESET ROLE;
+2026-11-07 23:05:57.608 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: INSERT INTO public.clientes (id, nombre, correo, telefono, rfc, edad, ciudad, codigo_postal, fecha_alta)
+
+	VALUES (999, 'Cliente de Prueba', 'prueba@test.com', '5550000000', 'XAXX010101000', 30, 'CDMX', '00000', CURRENT_DATE);
+2026-11-07 23:05:57.608 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  duplicate key value violates unique constraint "clientes_pkey"
+2026-11-07 23:05:57.608 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 DETAIL:  Key (id)=(999) already exists.
+2026-11-07 23:05:57.608 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  INSERT INTO public.clientes (id, nombre, correo, telefono, rfc, edad, ciudad, codigo_postal, fecha_alta)
+
+	VALUES (999, 'Cliente de Prueba', 'prueba@test.com', '5550000000', 'XAXX010101000', 30, 'CDMX', '00000', CURRENT_DATE);
+2026-11-07 23:05:57.885 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:06:00.971 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 28 búfers (0.2%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.070 s, sync=0.012 s, total=3.087 s; archivos sincronizados=25, más largo=0.003 s, promedio=0.001 s; distancia=119 kB, estimación=925 kB; lsn=0/3BD7628, lsn de redo=0/3BD75D0
+2026-11-07 23:06:47.114 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 999;
+
+	RESET ROLE;
+2026-11-07 23:06:47.115 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 ERROR:  permission denied for schema auditoria at character 13
+2026-11-07 23:06:47.115 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 QUERY:  INSERT INTO auditoria.historial_clientes (operacion, id_cliente, datos_anteriores, datos_nuevos)
+
+	        VALUES ('DELETE', OLD.id, row_to_json(OLD), NULL)
+2026-11-07 23:06:47.115 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 CONTEXT:  PL/pgSQL function auditoria.fn_auditar_clientes() line 4 at SQL statement
+2026-11-07 23:06:47.115 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 STATEMENT:  SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 999;
+
+	RESET ROLE;
+2026-11-07 23:07:41.414 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: ALTER FUNCTION auditoria.fn_auditar_clientes() SECURITY DEFINER;
+2026-11-07 23:07:44.525 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: SET ROLE app_ventas;
+
+	DELETE FROM public.clientes WHERE id = 999;
+
+	RESET ROLE;
+2026-11-07 23:08:47.672 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  statement: INSERT INTO public.clientes (id, nombre, correo, telefono, rfc, edad, ciudad, codigo_postal, fecha_alta)
+
+	SELECT
+
+	    (datos_anteriores->>'id')::BIGINT,
+
+	    datos_anteriores->>'nombre',
+
+	    datos_anteriores->>'correo',
+
+	    datos_anteriores->>'telefono',
+
+	    datos_anteriores->>'rfc',
+
+	    (datos_anteriores->>'edad')::INTEGER,
+
+	    datos_anteriores->>'ciudad',
+
+	    datos_anteriores->>'codigo_postal',
+
+	    (datos_anteriores->>'fecha_alta')::DATE
+
+	FROM auditoria.historial_clientes
+
+	WHERE operacion = 'DELETE' AND id_cliente = 999
+
+	ORDER BY id_auditoria DESC LIMIT 1;
+2026-11-07 23:09:45.184 CST [19516] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=50749
+2026-11-07 23:09:45.194 CST [19516] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:09:45.194 CST [19516] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:988505
+2026-11-07 23:10:57.977 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:10:59.316 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 12 búfers (0.1%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.325 s, sync=0.008 s, total=1.340 s; archivos sincronizados=12, más largo=0.003 s, promedio=0.001 s; distancia=53 kB, estimación=837 kB; lsn=0/3BE4C28, lsn de redo=0/3BE4BD0
+2026-11-07 23:17:35.372 CST [19516] user=postgres db=DBA app=pgAdmin 4 - CONN:988505 client=::1 LOG:  statement: UPDATE public.clientes SET rfc = 'GAMA780912ZZZ' WHERE id = 3;
+2026-11-07 23:17:38.488 CST [19516] user=postgres db=DBA app=pgAdmin 4 - CONN:988505 client=::1 ERROR:  permission denied for schema auditoria at character 15
+2026-11-07 23:17:38.488 CST [19516] user=postgres db=DBA app=pgAdmin 4 - CONN:988505 client=::1 STATEMENT:  SELECT * FROM auditoria.historial_clientes;
+2026-11-07 23:20:57.328 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:20:57.772 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 4 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.435 s, sync=0.004 s, total=0.445 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=4 kB, estimación=754 kB; lsn=0/3BE5E40, lsn de redo=0/3BE5DB0
+2026-11-07 23:21:25.886 CST [10636] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=53550
+2026-11-07 23:21:25.900 CST [10636] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:21:25.900 CST [10636] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:3821913
+2026-11-07 23:22:04.855 CST [10636] user=postgres db=DBA app=pgAdmin 4 - CONN:3821913 client=::1 LOG:  statement: -- 2. Insertar al nuevo cliente (Pedro Ruiz)
+
+	INSERT INTO public.clientes (id, nombre, correo, rfc, edad, ciudad, codigo_postal, fecha_alta)
+
+	VALUES (888, 'Pedro Ruiz', 'pedro.ruiz@example.test', 'RUPE950101AAA', 30, 'Guasave', '81000', CURRENT_DATE);
+2026-11-07 23:22:07.948 CST [10636] user=postgres db=DBA app=pgAdmin 4 - CONN:3821913 client=::1 LOG:  statement: DELETE FROM public.clientes WHERE id = 888;
+2026-11-07 23:25:13.528 CST [17424] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=58445
+2026-11-07 23:25:13.538 CST [17424] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:25:13.538 CST [17424] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:8360882
+2026-11-07 23:25:57.784 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:25:58.332 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 5 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.536 s, sync=0.006 s, total=0.548 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.001 s; distancia=5 kB, estimación=679 kB; lsn=0/3BE7548, lsn de redo=0/3BE74F0
+2026-11-07 23:26:15.779 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  statement: -- Intento 1: Borrar la evidencia
+
+	DELETE FROM auditoria.historial_clientes;
+2026-11-07 23:26:15.779 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 ERROR:  permission denied for schema auditoria at character 48
+2026-11-07 23:26:15.779 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 STATEMENT:  -- Intento 1: Borrar la evidencia
+
+	DELETE FROM auditoria.historial_clientes;
+2026-11-07 23:27:39.431 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  statement: ALTER TABLE public.clientes DISABLE TRIGGER trg_auditoria_clientes;
+2026-11-07 23:27:43.202 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  statement: UPDATE public.clientes SET rfc = 'GAMA780912GHI' WHERE id = 3;
+2026-11-07 23:27:46.925 CST [17424] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  statement: -- 3. Volver a encender el disparador
+
+	ALTER TABLE public.clientes ENABLE TRIGGER trg_auditoria_clientes;
+2026-11-07 23:30:57.333 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:30:57.555 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 2 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.213 s, sync=0.005 s, total=0.223 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=4 kB, estimación=612 kB; lsn=0/3BE8860, lsn de redo=0/3BE8808
+2026-11-07 23:31:46.306 CST [9984] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=60763
+2026-11-07 23:31:46.315 CST [9984] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:31:46.315 CST [9984] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:8360882
+2026-11-07 23:31:46.318 CST [9984] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.023 usuario=postgres base=DBA host=::1 port=60763
+2026-11-07 23:31:46.320 CST [22312] user=postgres db=DBA app=pgAdmin 4 - CONN:1567855 client=::1 LOG:  disconnection: session time: 0:48:09.187 user=postgres database=DBA host=::1 port=51684
+2026-11-07 23:31:47.017 CST [18596] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=63694
+2026-11-07 23:31:47.026 CST [18596] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:31:47.026 CST [18596] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:8360882
+2026-11-07 23:31:47.028 CST [18596] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.021 usuario=postgres base=DBA host=::1 port=63694
+2026-11-07 23:31:47.030 CST [8928] user=postgres db=DBA app=pgAdmin 4 - CONN:1877040 client=::1 LOG:  disconnection: session time: 0:38:45.503 user=postgres database=DBA host=::1 port=59466
+2026-11-07 23:31:47.504 CST [12892] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=53327
+2026-11-07 23:31:47.512 CST [12892] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:31:47.512 CST [12892] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:8360882
+2026-11-07 23:31:47.516 CST [12892] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.022 usuario=postgres base=DBA host=::1 port=53327
+2026-11-07 23:31:47.518 CST [19516] user=postgres db=DBA app=pgAdmin 4 - CONN:988505 client=::1 LOG:  disconnection: session time: 0:22:02.345 user=postgres database=DBA host=::1 port=50749
+2026-11-07 23:31:48.159 CST [22600] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=62028
+2026-11-07 23:31:48.170 CST [22600] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:31:48.170 CST [22600] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:8360882
+2026-11-07 23:31:48.174 CST [22600] user=postgres db=DBA app=pgAdmin 4 - CONN:8360882 client=::1 LOG:  desconexiÃ³n: duraciÃ³n de sesiÃ³n: 0:00:00.030 usuario=postgres base=DBA host=::1 port=62028
+2026-11-07 23:31:48.178 CST [10636] user=postgres db=DBA app=pgAdmin 4 - CONN:3821913 client=::1 LOG:  disconnection: session time: 0:10:22.306 user=postgres database=DBA host=::1 port=53550
+2026-11-07 23:31:51.556 CST [20644] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=64940
+2026-11-07 23:31:51.567 CST [20644] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:31:51.567 CST [20644] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:6013099
+2026-11-07 23:33:08.203 CST [20644] user=postgres db=DBA app=pgAdmin 4 - CONN:6013099 client=::1 LOG:  statement: -- 2. El Administrador hace un cambio masivo (afecta a toda la tabla)
+
+	UPDATE public.clientes SET edad = edad;
+2026-11-07 23:35:57.571 CST [5024] user= db= app= client= LOG:  empezando checkpoint: time
+2026-11-07 23:35:58.119 CST [5024] user= db= app= client= LOG:  checkpoint completo: escritos 5 búfers (0.0%); escritos 1 búfers SLRU; 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.538 s, sync=0.003 s, total=0.549 s; archivos sincronizados=6, más largo=0.001 s, promedio=0.001 s; distancia=14 kB, estimación=552 kB; lsn=0/3BEC2C8, lsn de redo=0/3BEC270
+2026-11-07 23:36:14.639 CST [9396] user=[desconocido] db=[desconocido] app=[desconocido] client=::1 LOG:  conexión recibida: host=::1 port=49264
+2026-11-07 23:36:14.650 CST [9396] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autenticada: identidad=«postgres» método=scram-sha-256 (C:/Program Files/PostgreSQL/18/data/pg_hba.conf:117)
+2026-11-07 23:36:14.650 CST [9396] user=postgres db=DBA app=[desconocido] client=::1 LOG:  conexión autorizada: usuario=postgres base_de_datos=DBA nombre_de_aplicación=pgAdmin 4 - CONN:4039157
+2026-11-07 23:38:14.984 CST [9396] user=postgres db=DBA app=pgAdmin 4 - CONN:4039157 client=::1 ERROR:  syntax error at or near "psql" at character 1
+2026-11-07 23:38:14.984 CST [9396] user=postgres db=DBA app=pgAdmin 4 - CONN:4039157 client=::1 STATEMENT:  psql -U postgres -d comercial -At -c "SELECT replace(pg_read_file(pg_current_logfile()), '<REDACTED>', '<REDACTED>')" > evidencias/bitacora-lab01.log
+2026-11-07 23:39:34.845 CST [9396] user=postgres db=DBA app=pgAdmin 4 - CONN:4039157 client=::1 ERROR:  invalid byte sequence for encoding "UTF8": 0xfa
+2026-11-07 23:39:34.845 CST [9396] user=postgres db=DBA app=pgAdmin 4 - CONN:4039157 client=::1 STATEMENT:  SELECT replace(pg_read_file(pg_current_logfile()), '<REDACTED>', '<REDACTED>');
