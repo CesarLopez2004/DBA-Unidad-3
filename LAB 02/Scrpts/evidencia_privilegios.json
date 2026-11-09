@@ -1,0 +1,2 @@
+{"_id":{"$oid":"6af143a0e375cc27eefab03d"},"momento":{"$date":"2026-11-09T03:53:04.962Z"},"tomada_por":[{"user":"admin","db":"admin"}],"usuarios":[{"user":"app_ventas","db":"comercial","roles":[{"role":"readWrite","db":"comercial"}]}]}
+{"_id":{"$oid":"6af14407e375cc27eefab03e"},"momento":{"$date":"2026-11-09T03:54:47.187Z"},"tomada_por":[{"user":"admin","db":"admin"}],"usuarios":[{"user":"app_ventas","db":"comercial","roles":[{"role":"dbAdmin","db":"comercial"},{"role":"readWrite","db":"comercial"}]}]}
